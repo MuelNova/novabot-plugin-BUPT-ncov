@@ -101,10 +101,14 @@ class BUPT_User:
 
     @property
     def _password(self):
+        if self.data.password is None:
+            return None
         return self.decrypt(self.data.password, convert=True)
 
     @property
     def _cookie(self):
+        if self.data.cookie is None:
+            return None
         return self.decrypt(self.data.cookie, convert=True)
 
     def encrypt(self, content: AnyStr) -> str:
@@ -199,6 +203,7 @@ class BUPT_User:
             return result.m
 
     async def check_in(self) -> str:
+
         try:
             data = await self.get_daily_report_data()
             # await asyncio.sleep(random.randint(2, 6))  # IDK Why but in case
@@ -210,7 +215,9 @@ class BUPT_User:
         except (LoginFailedException, ValueError) as e:
             return "---- 填报失败 ----\n" \
                    f"错误原因: {type(e)} {e}\n" \
-                   f"请检查是否设置了错误的帐号密码或Cookie\n"
+                   f"请检查是否设置了错误的帐号密码或Cookie\n" \
+                   f"如果你是第一次使用, 请使用 `ncov add` 添加一个新的账户\n" \
+                   f"详细帮助可使用 `ncov help` 查看"
         except ConnectionError as e:
             return "---- 填报失败 ----\n" \
                    f"错误原因: {type(e)} {e}\n" \

@@ -1,6 +1,7 @@
 from nonebot.rule import ArgumentParser
+from .model import PARSER_DESC
 
-ncov_parser = ArgumentParser("ncov")
+ncov_parser = ArgumentParser("ncov", description=PARSER_DESC)
 ncov_sub_parser = ncov_parser.add_subparsers(dest="cmd")
 
 add_parser = ncov_sub_parser.add_parser('add', help="添加新的用户")

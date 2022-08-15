@@ -7,6 +7,12 @@ LOGIN_URL = r"https://auth.bupt.edu.cn/authserver/login"
 REPORT_URL = r"https://app.bupt.edu.cn/ncov/wap/default/index"
 REPORT_POST_URL = r"https://app.bupt.edu.cn/ncov/wap/default/save"
 
+PARSER_DESC = """ BUPT 疫情打卡插件
+可实现固定时间沿用上次数据的打卡功能
+
+帮助可通过 `ncov -h` 以及添加对应的参数 ( 例如 `ncov add -h` ) 等查看
+"""
+
 
 class BUPT_Model(BaseModel, extra=Extra.ignore):
     user: int
