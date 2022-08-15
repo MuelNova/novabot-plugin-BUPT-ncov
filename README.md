@@ -15,23 +15,14 @@
 _✨ 让 BOT 手动帮你打卡叭✨_
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-example.svg" alt="license">
+    <img src="https://img.shields.io/github/license/Nova-Noir/novabot-plugin-BUPT-ncov.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-example">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-example.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/novabot-plugin-BUPT-ncov">
+    <img src="https://img.shields.io/pypi/v/novabot-plugin-BUPT-ncov.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
 
 </div>
-
-这是一个 Nova-Bot 插件项目的模板库, 你可以直接使用本模板创建你的 Nova-Bot 插件项目的仓库
-
-模板库使用方法:
-
-1. 点击仓库中的 "Use this template" 按钮, 输入仓库名与描述, 点击 "  Create repository from template" 创建仓库
-2. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
-3. 全局替换`owner`为仓库所有者ID; 全局替换`novabot-plugin-bupt-ncov`为插件名; 全局替换`novabot_plugin_bupt_ncov`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
-4. 修改 README 中的插件名和插件描述, 并在下方填充相应的内容
 
 ## 📖 介绍
 
