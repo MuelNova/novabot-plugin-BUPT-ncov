@@ -5,12 +5,14 @@
 </div>
 
 
+
 <div align="center">
 
 
-# novabot-plugin-example
 
-_✨ NovaBot 插件简单描述 ✨_
+# novabot-plugin-bupt-ncov
+
+_✨ 让 BOT 手动帮你打卡叭✨_
 
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/owner/nonebot-plugin-example.svg" alt="license">
@@ -28,12 +30,12 @@ _✨ NovaBot 插件简单描述 ✨_
 
 1. 点击仓库中的 "Use this template" 按钮, 输入仓库名与描述, 点击 "  Create repository from template" 创建仓库
 2. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
-3. 全局替换`owner`为仓库所有者ID; 全局替换`novabot-plugin-example`为插件名; 全局替换`novabot_plugin_example`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
+3. 全局替换`owner`为仓库所有者ID; 全局替换`novabot-plugin-bupt-ncov`为插件名; 全局替换`novabot_plugin_bupt_ncov`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
 4. 修改 README 中的插件名和插件描述, 并在下方填充相应的内容
 
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+重写的 BUPT 手动疫情打卡 BOT
 
 ## 💿 安装
 
@@ -42,7 +44,8 @@ _✨ NovaBot 插件简单描述 ✨_
 在 Nova-Bot 项目的根目录下打开命令行, 输入以下指令即可安装
 
 
-    nb plugin install novabot-plugin-example
+
+    nb plugin install novabot-plugin-bupt-ncov
 
 </details>
 
@@ -51,11 +54,13 @@ _✨ NovaBot 插件简单描述 ✨_
 在 Nova-Bot 项目的插件目录下, 打开命令行, 根据你使用的包管理器, 输入相应的安装命令
 
 
+
 <details>
 <summary>pip</summary>
 
 
-    pip install novabot-plugin-example
+
+    pip install novabot-plugin-bupt-ncov
 
 </details>
 
@@ -63,7 +68,8 @@ _✨ NovaBot 插件简单描述 ✨_
 <summary>pdm</summary>
 
 
-    pdm add novabot-plugin-example
+
+    pdm add novabot-plugin-bupt-ncov
 
 </details>
 
@@ -71,7 +77,8 @@ _✨ NovaBot 插件简单描述 ✨_
 <summary>poetry</summary>
 
 
-    poetry add novabot-plugin-example
+
+    poetry add novabot-plugin-bupt-ncov
 
 </details>
 
@@ -79,13 +86,14 @@ _✨ NovaBot 插件简单描述 ✨_
 <summary>conda</summary>
 
 
-    conda install novabot-plugin-example
+
+    conda install novabot-plugin-bupt-ncov
 
 </details>
 
 打开 Nova-Bot 项目的 `bot.py` 文件, 在其中写入
 
-    nonebot.load_plugin('novabot_plugin_example')
+    nonebot.load_plugin('novabot_plugin_bupt_ncov')
 
 </details>
 
@@ -94,7 +102,8 @@ _✨ NovaBot 插件简单描述 ✨_
 在 Nova-Bot 项目的插件目录下, 打开命令行, 输入以下命令克隆此储存库
 
 
-    git clone https://github.com/owner/novabot-plugin-example.git
+
+    git clone https://github.com/owner/novabot-plugin-bupt-ncov.git
 
 打开 Nova-Bot 项目的 `bot.py` 文件, 在其中写入
 
@@ -102,24 +111,17 @@ _✨ NovaBot 插件简单描述 ✨_
 
 </details>
 
-## ⚙️ 配置
-
-在 Nova-Bot 项目的`.env`文件中添加下表中的必填配置
-
-| 配置项  | 必填 | 默认值 |   说明   |
-| :-----: | :--: | :----: | :------: |
-| 配置项1 |  是  |   无   | 配置说明 |
-| 配置项2 |  否  |   无   | 配置说明 |
-
 ## 🎉 使用
 
 ### 指令表
 
-| 指令  | 权限 | 需要@ | 范围 |   说明   |
-| :---: | :--: | :---: | :--: | :------: |
-| 指令1 | 主人 |  否   | 私聊 | 配置说明 |
-| 指令2 | 群员 |  是   | 群聊 | 配置说明 |
+|                             指令                             | 权限 | 需要@ | 范围 |     说明     |
+| :----------------------------------------------------------: | :--: | :---: | :--: | :----------: |
+|                             ncov                             | 所有 |  否   | 私聊 |     打卡     |
+|            ncov add [-h] [-t TIME] user password             | 所有 |  否   | 私聊 | 添加新的用户 |
+|                       ncov remove [-h]                       | 所有 |  否   | 私聊 |   删除用户   |
+| ncov modify [-h] [-u USER] [-p PASSWORD] [-t TIME] [-s STATUS] | 所有 |  否   | 私聊 |   修改用户   |
+|                        ncov list [-h]                        | 所有 |  否   | 私聊 | 显示用户状态 |
 
-### 效果图
+所有指令都可以通过添加 `-h` 或 `--help` 都可以查看具体信息
 
-如果有效果图的话
