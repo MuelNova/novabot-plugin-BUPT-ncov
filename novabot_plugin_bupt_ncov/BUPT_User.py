@@ -1,3 +1,4 @@
+import asyncio
 import base64
 import json
 import re
@@ -231,9 +232,11 @@ class BUPT_User:
             sessions.remove(self.session)
             await self.session.close()
 
+    def __del__(self):
+        asyncio.create_task(self.close_session())
+
 
 class BUPT_ncov_DB:
-
     @staticmethod
     def get_time_set() -> Set[str]:
         times = set()
